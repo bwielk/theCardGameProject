@@ -1,6 +1,6 @@
 import static org.junit.Assert.*;
 import org.junit.*;
-import card_game.*;
+import card_game_pack.*;
 
 public class CardTest{
 

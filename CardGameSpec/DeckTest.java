@@ -1,6 +1,6 @@
-import static.org.junit.Assert.*;
+import static org.junit.Assert.*;
 import org.junit.*;
-import card_game.*;
+import card_game_pack.*;
 
 public class DeckTest{
 
@@ -10,14 +10,14 @@ public class DeckTest{
   @Before
   public void before(){
     deck = new Deck();
-    card = new Card(CardValue.10, CardSuit.DIAMOND);
+    card = new Card(CardValue.TEN, CardSuit.DIAMOND);
   }
 
   @Test
   public void canAddAndStoreCards(){
     deck.addCard(card);
-    card2 = new Card(CardValue.10, CardSuit.DIAMOND);
+    Card card2 = new Card(CardValue.NINE, CardSuit.DIAMOND);
     deck.addCard(card2);
-    assertEquals(2, deck.cardCount())
+    assertEquals(2, deck.cardCount());
   }
 }
