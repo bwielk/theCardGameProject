@@ -1,10 +1,10 @@
 package card_game;
 
 public enum CardValue{
-  ACE, //14
-  KING, //13
-  QUEEN,//12
-  JACK, //11
+  ACE, 
+  KING, 
+  QUEEN,
+  JACK,
   10,
   9,
   8,
