@@ -27,11 +27,7 @@ public class Dealer{
       playerHand.acceptCard(dealerCards.remove(index));
       index++ ;
     }
-  }    
+  }
 }
-
-
-
-
 //you can create numerous packages
 //rules package

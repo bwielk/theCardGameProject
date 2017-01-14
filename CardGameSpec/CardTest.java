@@ -8,7 +8,7 @@ public class CardTest{
 
   @Before
   public void before(){
-    card = new Card(CardValue.ACE, CardSuit.HEART);
+    card = new Card(CardValue.ACE, CardSuit.HEART, CardValue.ACE.strength);
   }
 
   @Test
@@ -19,5 +19,10 @@ public class CardTest{
   @Test 
   public void canGetSuit(){
     assertEquals(CardSuit.HEART, card.getSuit());
+  }
+
+  @Test
+  public void canGetStrength(){
+    assertEquals(14, card.getStrength());
   }
 }

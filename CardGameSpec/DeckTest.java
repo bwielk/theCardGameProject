@@ -10,13 +10,19 @@ public class DeckTest{
   @Before
   public void before(){
     deck = new Deck();
-    card = new Card(CardValue.TEN, CardSuit.DIAMOND);
+    card = new Card(CardValue.TEN, CardSuit.DIAMOND, CardValue.TEN.strength);
+  }
+
+  @Test
+  public void canCreateDeck(){
+    deck.createDeck();
+    assertEquals(52, deck.cardCount());
   }
 
   @Test
   public void canAddAndStoreCards(){
     deck.addCard(card);
-    Card card2 = new Card(CardValue.NINE, CardSuit.DIAMOND);
+    Card card2 = new Card(CardValue.NINE, CardSuit.DIAMOND, CardValue.NINE.strength);
     deck.addCard(card2);
     assertEquals(2, deck.cardCount());
   }
