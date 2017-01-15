@@ -1,7 +1,7 @@
 package card_game_pack;
 import java.util.*;
 
-public class Deck{
+public class Deck implements Playable{
 
   private ArrayList<Card> deck = new ArrayList<Card>();
 
@@ -12,7 +12,7 @@ public class Deck{
   public void createDeck(){
     for(CardValue value : CardValue.values()){
       for(CardSuit suit : CardSuit.values()){
-        Card card = new Card(value, suit, value.strength); //new CARD to be pushed <<
+        Card card = new Card(value, suit, value.strength); //a new CARD to be pushed <<
         deck.add(card);
       }
     }

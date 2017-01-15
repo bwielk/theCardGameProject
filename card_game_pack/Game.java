@@ -4,16 +4,16 @@ import java.util.*;
 public class Game{
 
   private String name;
-  private Deck deck;
-  private ArrayList<Player> setOfPlayers = new ArrayList<Player>();
-  private ArrayList<Deck> setOfDecks = new ArrayList<Deck>();
+  private ArrayList<Player> players = new ArrayList<Player>();
+  private ArrayList<Deck> decks = new ArrayList<Deck>();
+  private Player current_player;
 
 
   public Game(String name){
     this.name = name;
-    this.setOfPlayers = new ArrayList<Player>();
-    this.setOfDecks = new ArrayList<Deck>();
-
+    this.players = new ArrayList<Player>();
+    this.decks = new ArrayList<Deck>();
+    this.current_player = players.get(0);
   }
 
   public String getName(){
@@ -21,12 +21,39 @@ public class Game{
   }
 
   public int playerCount(){
-    return setOfPlayers.size();
+    return players.size();
   }
 
   public void createAPlayer(String name){
     Player player = new Player(name);
-    setOfPlayers.add(player);
+    players.add(player);
   }
+
+  public int deckCount(){
+    return decks.size();
+  }
+
+  // public void addADeck(int number_of_decks){//--------------------------! wrong return type
+  //   for(int i=0; i <= number_of_decks; i++){
+  //     Deck newDeck = new Deck();
+  //     decks.add(newDeck.createDeck());
+  //   }
+  // }
+
+  public void currentPlayer(){
+    return this.current_player;
+  }
+
+  public void setCurrentPlayer(ArrayList players){
+    this.current_player = players.get(0);
+  }
+
+  public void nextTurn(){
+    Collections.rotate(players, 1); //players = elements; 1 = distance;
+  }
+
+  
+
+
 
 }

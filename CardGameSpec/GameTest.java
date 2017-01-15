@@ -26,4 +26,18 @@ public class GameTest{
     game.createAPlayer("ABC");
     assertEquals(2, game.playerCount());
   }
+
+  // @Test --------------------------------------------! wrong return type
+  // public void CanAddADeck(){
+  //   game.addADeck(2);
+  //   assertEquals(2, game.deckCount());
+  // }
+  
+  @Test
+  public void PlayerCanTakeTurns(){
+    game.createAPlayer("XYZ");
+    game.createAPlayer("ABC");
+    game.nextTurn();
+    assertEquals("ABC", game.currentPlayer());
+  }
 }

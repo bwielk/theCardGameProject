@@ -14,8 +14,16 @@ public class Hand{
   }
 
   public void acceptCard(Card card){
-    hand.add(card);
+    if(0 ==hand.size()){
+      hand.add(card);
+    }
   }
 
+  public void cardAway(Card card){
+    hand.remove(0);
+  }
 
+  public void clearHand(){
+    hand.clear();
+  }
 }

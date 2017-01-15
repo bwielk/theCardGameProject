@@ -1,6 +1,6 @@
 package card_game_pack;
 
-public class Card{
+public class Card implements Playable{
   
   private CardValue value;
   private CardSuit suit;
