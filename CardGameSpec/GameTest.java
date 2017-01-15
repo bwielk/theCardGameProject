@@ -33,11 +33,11 @@ public class GameTest{
   //   assertEquals(2, game.deckCount());
   // }
   
-  @Test
-  public void PlayerCanTakeTurns(){
-    game.createAPlayer("XYZ");
-    game.createAPlayer("ABC");
-    game.nextTurn();
-    assertEquals("ABC", game.currentPlayer());
-  }
+  // @Test
+  // public void PlayerCanTakeTurns(){
+  //   game.createAPlayer("XYZ");
+  //   game.createAPlayer("ABC");
+  //   game.nextTurn();
+  //   assertEquals("ABC", game.currentPlayer());
+  //}
 }

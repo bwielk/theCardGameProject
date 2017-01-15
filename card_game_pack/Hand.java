@@ -19,11 +19,15 @@ public class Hand{
     }
   }
 
-  public void cardAway(Card card){
+  public void cardAway(){
     hand.remove(0);
   }
 
   public void clearHand(){
     hand.clear();
+  }
+
+  public Card showCard(){
+    return hand.get(0);
   }
 }

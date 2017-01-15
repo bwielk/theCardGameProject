@@ -22,4 +22,18 @@ public class HandTest{
     hand.acceptCard(card2);
     assertEquals(2, hand.cardCount());
   }
+
+  // @Test
+  // public void HandGetsRidOfCards(){
+  //   hand.acceptCard(card);
+  //   hand.cardAway();
+  //   assertEquals(0, hand.cardCount());
+  // }
+
+  // @Test
+  // public void CanShowCard(){
+  //   hand.acceptCard(card);
+  //   assertEquals(card, hand.showCard()); ///???????
+  // }
+
 }

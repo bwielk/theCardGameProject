@@ -51,9 +51,12 @@ public class Game{
   public void nextTurn(){
     Collections.rotate(players, 1); //players = elements; 1 = distance;
   }
-
-  
-
-
-
+  // GAME RUNNER SKETCH
+  // public void gameOn(){
+  //   HashMap<String, int> list = new HashMap<Player, Card>();
+  //   for(Player player : players){
+  //     list.put(player.getName, player.showCard().getStrength());
+  //     for()
+  //   }
+  //}
 }
